@@ -1,14 +1,22 @@
 #ifndef REGISTRO_H
 #define REGISTRO_H
 
-struct tRegistro {
+const int MAX =80;
+struct tRegistroCod{
+    int codigo;
+    char item[MAX];
+    double valor;
+};
+
+struct tRegistroNom{
   char nombre[30];
   int cantidad;
   double precio;
 };
 
-const int SIZE = sizeof(tRegistro);
-
-void mostrar(const tRegistro &registro);
+const int codtam = sizeof(tRegistroCod);
+const int nomtam = sizeof(tRegistroNom);
+void mostrarCod(const tRegistroCod &registro);
+void mostrarNom(const tRegistroNom &registro);
 
 #endif // REGISTRO_H
